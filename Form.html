@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+   <script type="text/javascript">
+    function verify()
+{
+  var name = document.getElementById("name");
+  var gender = document.getElementsByName("gender");
+  var pass = document.getElementById("pass");
+  var msg = new Array();
+  var message = "Following Details are Required\n";
+  var message2 = "Following Details are Required<br>";
+  if(name.value == "")
+  {
+    msg[0] = "First Name is Required";
+    flag = 0;
+  } else { msg[0] = ""; }
+ 
+  if(name.value =="")
+  {
+    msg[1] = "Last Name is required";
+    flag = 0;
+  } else { msg[1] = ""; }
+   
+  if(Number.value == "")
+  {
+    msg[2] = "Registration Number is Required";
+    flag = 0;
+  } else { msg[2] = ""; }
+ 
+  if(Number.length = 10)
+  {
+    msg[3] = "Mobile Number";
+    flag = 0;
+  } else { msg[3] = ""; }
+
+  if(email id.value == "")
+  {
+    msg[2] = "Email Id is Required";
+    flag = 0;
+  } else { msg[4] = ""; }
+
+  if(Address.value == "")
+  {
+    msg[2] = "Address is Required";
+    flag = 0;
+  } else { msg[5] = ""; }
+ 
+  if(flag == 0)
+  {
+    // Show Error Messages
+    for(var x=0;x<=3;x++)
+    {
+      if(msg[x] != "")
+      {
+        message += msg[x] + "\n";
+        message2 += msg[x] + "<br>";
+      }
+    }
+    alert(message);
+    document.getElementById("abc").innerHTML = "<p style='color:red;'>"+message2+"</p>";
+    return false;
+  }
+  else
+  {
+    return true;
+  } 
+}
+
+</script>
+  <title>Form</title>
+  <style type="text/css">
+    body{
+      background-image: url(image3.jpg);
+      background-size: cover;
+    }
+  </style>
+ </head>
+ <body>
+  </script>
+<div align="center" style="color: white">
+  <h1>EXAM REGISTRATION FORM</h1>
+    <h3 id="abc"></h3>
+    <form method="post" action="" onSubmit="return verify()">
+      <table border="2" cellspacing="0" cellpadding="10">
+        <tr>
+          <td colspan="2" align="center">* All fields are mandatory</td>
+       </tr>
+       <tr>
+        <!----- First Name ---------------------------------------------------------->
+        <tr>
+        <td>FIRST NAME</td>
+        <td><input type="text"  id="name" name="First_Name" size="25" placeholder="First Name"/ required>
+        </td>
+        </tr>
+         
+        <!----- Last Name ---------------------------------------------------------->
+        <tr>
+        <td>LAST NAME</td>
+        <td><input type="text" id="name" name="Last_Name" size="25" placeholder="Last Name" / required>
+        </td> 
+        </tr>
+
+        <!----- Student Registration -------------------------------------------------------->
+        <td>STUDENT REGISTRATION NUMBER: </td>
+        <td><input type="text" id="name" name="name" size="25" placeholder="Enter Registration Number" / required></td>
+       </tr>
+       <tr>
+        <!----- Date Of Birth -------------------------------------------------------->
+      <tr>
+      <td>DATE OF BIRTH</td>
+ 
+      <td>
+      <select name="Birthday_day" id="Birthday_Day">
+      <option value="-1">Day:</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+      <option value="13">13</option>
+      <option value="14">14</option>
+      <option value="15">15</option>
+      <option value="16">16</option>
+      <option value="17">17</option>
+      <option value="18">18</option>
+      <option value="19">19</option>
+      <option value="20">20</option>
+      <option value="21">21</option>
+       
+      <option value="22">22</option>
+      <option value="23">23</option>
+      <option value="24">24</option>
+      <option value="25">25</option>
+      <option value="26">26</option>
+      <option value="27">27</option>
+      <option value="28">28</option>
+      <option value="29">29</option>
+      <option value="30">30</option>
+      <option value="31">31</option>
+  </select>
+       
+      <select id="Birthday_Month" name="Birthday_Month">
+      <option value="-1">Month:</option>
+      <option value="January">Jan</option>
+      <option value="February">Feb</option>
+      <option value="March">Mar</option>
+      <option value="April">Apr</option>
+      <option value="May">May</option>
+      <option value="June">Jun</option>
+      <option value="July">Jul</option>
+      <option value="August">Aug</option>
+      <option value="September">Sep</option>
+      <option value="October">Oct</option>
+      <option value="November">Nov</option>
+      <option value="December">Dec</option>
+  </select>
+ 
+  <select name="Birthday_Year" id="Birthday_Year">
+ 
+      <option value="-1">Year:</option>
+      <option value="2012">2012</option>
+      <option value="2011">2011</option>
+      <option value="2010">2010</option>
+      <option value="2009">2009</option>
+      <option value="2008">2008</option>
+      <option value="2007">2007</option>
+      <option value="2006">2006</option>
+      <option value="2005">2005</option>
+      <option value="2004">2004</option>
+      <option value="2003">2003</option>
+      <option value="2002">2002</option>
+      <option value="2001">2001</option>
+      <option value="2000">2000</option>
+      </select>
+</td>
+</tr>
+            <!------ Mobile Number------------------------------------------------->
+        <tr>
+        <td>MOBILE NUMBER</td>
+        <td>
+        <input type="text" id="name" name="Mobile_Number" maxlength="10" placeholder="0000000000"/ required>
+        (10 digit number)
+        </td>
+        </tr>
+
+            <!----- Gender ----------------------------------------------------------->
+        <tr>
+        <td>GENDER</td>
+        <td>
+        Male <input type="radio" id="name" name="Gender" value="Male"   />
+        Female <input type="radio"  id="name" name="Gender" value="Female"   />
+        </td>
+        </tr>
+            <!----- Email Id ---------------------------------------------------------->
+        <tr>
+        <td>EMAIL ID</td>
+        <td><input type="text" id="name" name="Email_Id" placeholder="Enter Email" /></td reuired>
+        </tr>
+            <!---------Address ---------------------------------------------------------->
+        <tr>
+        <td>ADDRESS <br /><br /><br /></td>
+        <td><textarea name="Address" id="name" rows="4" cols="30" required></textarea></td>
+        </tr>
+
+            <!----- Submit and Reset ------------------------------------------------->
+        <tr>
+        <td colspan="2" align="center">
+        <button onclick = "validate()" type="submit">Submit</button>
+        <button type="reset" value="Reset">
+        Reset</button>
+        </td>
+        </tr>
+        </table>
+    </form>
+</div>
+ </body>
+ </html>
